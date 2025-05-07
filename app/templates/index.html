@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>The Seerious Chat</title>
+    <!-- Link to external CSS file served via FastAPI static files -->
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h1>🔮 The Seerious Chat</h1>
+    <input type="text" id="prompt" placeholder="Ask your question..." />
+    <br>
+    <button onclick="sendPrompt()">Send</button>
+    <div id="response"></div>
+
+    <script>
+        async function sendPrompt() {
+            const prompt = document.getElementById('prompt').value;
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerText = "Consulting the spirits...";
+
+            const res = await fetch('/chat/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: prompt })
+            });
+
+            const data = await res.json();
+            responseDiv.innerText = data.reply || "No response.";
+        }
+    </script>
+</body>
+</html>
