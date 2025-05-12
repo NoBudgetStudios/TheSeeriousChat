@@ -21,6 +21,22 @@ It blends foresight, “spirit messages,” and quirky life advice, delivering i
 - **Testing:** pytest
 
 ---
+### 📁 Project Structure
+
+<pre>
+TheSeeriousChat/
+├── app/
+│   └── main.py                  # FastAPI app logic
+├── static/
+│   ├── style.css                # Styling for the frontend
+│   └── script.js                # JS handling the chat interaction
+├── templates/
+│   └── index.html               # HTML frontend template
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project info and usage
+└── venv/                        # (optional) Python virtual environment
+</pre>
+---
 
 ## 💻 How to Run
 
