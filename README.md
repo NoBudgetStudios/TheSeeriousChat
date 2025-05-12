@@ -86,9 +86,9 @@ pytest tests/
 
 ## 🔒 License
 
-This project is licensed under **CC BY-NC 4.0**.  
-You can share and adapt, but **commercial use is not allowed**.  
-[Read the full license here.](https://creativecommons.org/licenses/by-nc/4.0/)
+This project is licensed under the **MIT License**.  
+You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software.  
+[Read the full license here.](https://opensource.org/licenses/MIT)
 
 ---
 
