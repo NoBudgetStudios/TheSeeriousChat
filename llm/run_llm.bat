@@ -5,10 +5,10 @@ if exist "venv\Scripts\activate.bat" (
     call venv\Scripts\activate
 ) else (
     echo ❌ Virtual environment not found. Running setup...
-    call setup_mistral.bat
+    call init_venv.bat
     call venv\Scripts\activate
 )
 
 REM Run the main script
-echo 🚀 Launching Mistral chat...
-python mistral_local.py
+echo 🚀 Launching the chat...
+python llm_local.py

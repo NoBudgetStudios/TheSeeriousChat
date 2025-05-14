@@ -3,7 +3,7 @@ REM Create virtual environment
 python -m venv venv
 
 REM Activate the virtual environment
-call mistral_env\Scripts\activate
+call venv\Scripts\activate
 
 REM Install required packages
 pip install -r requirements.txt
