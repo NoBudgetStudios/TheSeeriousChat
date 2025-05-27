@@ -4,7 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel  # ✅ required for request body
 import os
+import sys
 import random
+sys.path.append(os.path.relpath("local online llm"))
+from llm_local import generate_mystical_response
 
 app = FastAPI()
 
@@ -52,7 +55,11 @@ def generate_random_reply():
     ]
     return random.choice(responses)
 
-
 @app.post("/chat/")
 async def chat_response(msg: Message):
-    return {"reply": generate_random_reply()}
+    try:
+        response = generate_mystical_response(msg.message)
+        return {"reply": response}
+    except Exception as e:
+        print(f"⚠️ LLM error: {e}")
+        return {"reply": generate_random_reply()}
