@@ -15,10 +15,10 @@ It blends foresight, “spirit messages,” and quirky life advice, delivering i
 ## 🛠️ Stack
 
 - **Backend:** FastAPI (Python)
-- **Model:** Hugging Face Inference API (e.g., `mistralai/Mistral-7B-Instruct`)
-- **Frontend:** Minimal HTML + JS (optional)
-- **Hosting:** Hugging Face Spaces (or free-tier cloud)
-- **Testing:** pytest
+- **Model:** Local LLM (`TinyLLaMA/TinyLLaMA-1.1B-Chat-v1.0`)
+- **Frontend:** Minimal HTML + JS
+- **Hosting:** Local server / Self-hosted
+- **Testing:** pytest (optional)
 
 ---
 ### 📁 Project Structure
@@ -30,6 +30,10 @@ TheSeeriousChat/
 ├── static/
 │   ├── style.css                # Styling for the frontend
 │   └── script.js                # JS handling the chat interaction
+├── local offline llm/
+│   └── llm_model.py             # TinyLLaMA loading and generation logic
+├── local online llm/
+│   └── llm_model.py             # TinyLLaMA loading and generation logic
 ├── templates/
 │   └── index.html               # HTML frontend template
 ├── requirements.txt             # Python dependencies
@@ -94,4 +98,4 @@ You are free to use, copy, modify, merge, publish, distribute, sublicense, and/o
 
 ## 🙌 Credits
 
-Made with ✨ and curiosity by [Your Name].
+Made with ✨ and curiosity by Konstantinos Klimantakis.
