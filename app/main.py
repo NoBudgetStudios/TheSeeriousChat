@@ -6,7 +6,7 @@ from pydantic import BaseModel  # ✅ required for request body
 import os
 import sys
 import random
-sys.path.append(os.path.relpath("local online llm"))
+sys.path.append(os.path.relpath("local_online_llm"))
 from llm_local import generate_mystical_response
 
 app = FastAPI()
